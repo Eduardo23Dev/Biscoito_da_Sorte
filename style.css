@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --color-texts: #34355b;
+  --color-buttin: #ff9500;
+}
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(45deg, #190361 0%, #bb00ff 100%);
+}
+.fullContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  margin: -10rem 5rem 0 5rem;
+  width: min(42.8rem, 90%);
+  padding: 4.8rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+}
+
+.screen_1 {
+  display: flex;
+  flex-direction: column;
+  width: min(30rem, 90%);
+  height: min(31.9rem, 90%);
+  text-align: center;
+}
+.screen_1 h2,
+.screen_2 h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: var(--color-texts);
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+.screen_1 p {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 1.4rem 0 2rem 0;
+  color: var(--color-texts);
+}
+
+.screen_2 {
+  display: none;
+  flex-direction: column;
+  width: min(30rem, 90%);
+  height: min(31.9rem, 90%);
+  text-align: center;
+}
+
+.userLuck {
+  max-width: 29.3rem;
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+  padding: 1rem;
+  margin-top: 1.7em;
+  margin-bottom: 6rem;
+  animation-name: menssager;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+.userLuck p {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+.screen_2 button {
+  cursor: pointer;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  padding: 1.6rem;
+  border: none;
+  color: #ffffff;
+  margin-top: 6rem;
+  background-color: var(--color-buttin);
+  border-radius: 0.4rem;
+}
+.screen_2 button:hover {
+  transition: 0.5s;
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
+.screen_1 img:hover {
+  cursor: pointer;
+  animation-name: moveCoock;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveCoock {
+  0% {
+    transform: translateX(0);
+    transform: translateY(0.5rem);
+  }
+
+  20% {
+    transform: translateX(-0.5rem);
+    transform: translateY(-0.5rem);
+  }
+
+  40% {
+    transform: translateX(-0.5rem);
+    transform: translateY(-0.5rem);
+  }
+
+  60% {
+    transform: translateX(-0.5rem);
+  }
+
+  80% {
+    transform: translateX(0.5rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes menssager {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
